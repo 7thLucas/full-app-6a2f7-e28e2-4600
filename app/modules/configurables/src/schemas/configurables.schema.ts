@@ -71,5 +71,88 @@ export const configurableSchemas: ConfigurableSchemas = {
         },
       ],
     },
+    // ── Hero Section ─────────────────────────────────────────────────────────
+    {
+      fieldName: "heroHeadline",
+      type: "string",
+      required: true,
+      label: "Hero Headline",
+      maxLength: 80,
+    },
+    {
+      fieldName: "heroTagline",
+      type: "string",
+      required: true,
+      label: "Hero Tagline",
+      maxLength: 120,
+    },
+    {
+      fieldName: "heroCtaLabel",
+      type: "string",
+      required: true,
+      label: "Hero CTA Button Label",
+      maxLength: 40,
+    },
+    {
+      fieldName: "heroCtaHref",
+      type: "string",
+      required: false,
+      label: "Hero CTA Link (anchor or URL)",
+      maxLength: 200,
+    },
+    {
+      fieldName: "heroImage",
+      type: "file",
+      required: false,
+      label: "Hero Background Image",
+    },
+    // ── Store Info Section ────────────────────────────────────────────────────
+    {
+      fieldName: "storeInfoHeading",
+      type: "string",
+      required: true,
+      label: "Store Info Section Heading",
+      maxLength: 60,
+    },
+    {
+      fieldName: "storeAddress",
+      type: "string",
+      required: true,
+      label: "Store Address",
+      maxLength: 200,
+    },
+    {
+      fieldName: "storePhone",
+      type: "string",
+      required: false,
+      label: "Store Phone Number",
+      maxLength: 30,
+    },
+    {
+      fieldName: "storeEmail",
+      type: "string",
+      required: false,
+      label: "Store Email",
+      maxLength: 100,
+    },
+    {
+      fieldName: "businessHours",
+      type: "array",
+      label: "Business Hours",
+      item: {
+        type: "object",
+        fields: [
+          { fieldName: "days", type: "string", required: true, label: "Days" },
+          { fieldName: "hours", type: "string", required: true, label: "Hours" },
+        ],
+      },
+    },
+    {
+      fieldName: "footerText",
+      type: "string",
+      required: false,
+      label: "Footer Text",
+      maxLength: 200,
+    },
   ],
 };
