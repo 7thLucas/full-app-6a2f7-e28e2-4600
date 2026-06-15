@@ -1,44 +1,68 @@
 <style>
-  .mode-landscape .sl-layout { flex-direction: row; }
-  .mode-portrait .sl-layout { flex-direction: column; }
-  .mode-landscape .sl-content { width: 55%; }
-  .mode-portrait .sl-content { width: 100%; }
-  .mode-landscape .sl-image { width: 45%; }
-  .mode-portrait .sl-image { width: 100%; height: 40%; }
+  .mode-landscape .sl-cover-layout { flex-direction: row; }
+  .mode-portrait .sl-cover-layout { flex-direction: column; }
+  .mode-landscape .sl-cover-left { width: 52%; }
+  .mode-portrait .sl-cover-left { width: 100%; }
+  .mode-landscape .sl-cover-right { width: 48%; }
+  .mode-portrait .sl-cover-right { width: 100%; height: 40%; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-layout flex h-full">
-    <!-- Left content -->
-    <div class="sl-content flex flex-col justify-between p-12 bg-white">
+  <div class="sl-cover-layout flex h-full">
+
+    <!-- Left column -->
+    <div class="sl-cover-left flex flex-col justify-between bg-white" style="padding: 3rem 2.5rem;">
+
       <div>
-        <div class="flex items-center gap-3 mb-8">
-          <span class="w-8 h-0.5 bg-rose-400 inline-block rounded"></span>
-          <span class="text-rose-500 text-xs font-bold uppercase tracking-widest">Flower Store · Landing Page</span>
-        </div>
-        <h1 class="text-7xl font-black text-emerald-900 leading-none mb-4 tracking-tight">
-          Veroflower
+        <!-- Category tag -->
+        <span class="inline-block bg-rose-100 text-rose-600 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-7">
+          Flower Store
+        </span>
+
+        <!-- Headline -->
+        <h1 class="text-5xl font-black leading-tight tracking-tight text-slate-900 mb-5">
+          Fresh Flowers,<br>Crafted with Love.
         </h1>
-        <p class="text-lg text-slate-600 leading-relaxed max-w-xs mt-6">
-          A clean, visual two-section landing page that turns curious locals into walk-in customers.
+
+        <!-- Tagline -->
+        <p class="text-base text-slate-500 leading-relaxed" style="max-width: 22rem;">
+          A warm, elegant landing page that turns online discovery into real store visits — for Veroflower.
         </p>
-        <div class="flex gap-2 mt-8">
-          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Hero</span>
-          <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Store Info</span>
-          <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Walk-ins</span>
+
+        <!-- Accent rule -->
+        <div class="mt-7 flex items-center gap-3">
+          <div class="h-1 w-10 bg-rose-300 rounded-full"></div>
+          <div class="h-1 w-4 bg-green-300 rounded-full"></div>
+        </div>
+
+        <!-- Brand badge -->
+        <div class="mt-6 flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-green-300"></div>
+          <span class="text-xs font-bold text-green-700 tracking-widest uppercase">Veroflower</span>
+        </div>
+
+        <!-- Section pills -->
+        <div class="flex gap-2 mt-6">
+          <span class="bg-rose-100 text-rose-600 text-xs font-semibold px-3 py-1.5 rounded-full">Hero Banner</span>
+          <span class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full">Store Info</span>
         </div>
       </div>
+
+      <!-- Attribution -->
       <div>
         <data-attribution />
       </div>
     </div>
-    <!-- Right image -->
-    <div class="sl-image relative overflow-hidden">
+
+    <!-- Right column: image -->
+    <div class="sl-cover-right relative overflow-hidden">
       <img
-        src="http://localhost:8001/common/image-generation?prompt=elegant%20fresh%20flower%20bouquet%20roses%20peonies%20lush%20greenery%20soft%20natural%20light%20premium%20florist%20white%20background%20editorial"
-        alt="Veroflower signature bouquet"
+        src="http://localhost:8001/common/image-generation?prompt=A%20lush%20bouquet%20of%20blush%20pink%20roses%20and%20soft%20green%20eucalyptus%20wrapped%20in%20white%20craft%20paper%2C%20held%20by%20florist%20hands%2C%20natural%20daylight%2C%20clean%20warm%20white%20background%2C%20editorial%20floral%20photography%2C%20premium%20feel"
+        alt="Fresh blush pink rose bouquet crafted by Veroflower"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent" style="opacity:0.18"></div>
+      <!-- Left fade to white -->
+      <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent"></div>
     </div>
+
   </div>
 </section>
