@@ -1,0 +1,1 @@
+create me a simple lp with 2 section only dont be long, i need it finished in 1 minute. it should show a flower store
