@@ -4,7 +4,7 @@
 A simple, elegant two-section landing page for a local flower store. Clean web presence to showcase flowers and drive orders or inquiries.
 
 ## Audience
-Gift buyers, romantics, event planners, and locals looking for fresh flowers — primarily browsing on mobile.
+Walk-in customers — locals who discover Bloom & Co. online and choose to visit the store in person.
 
 ## Positioning
 Premium yet approachable local florist. Freshness, craft, and the joy of gifting — communicated in seconds.
