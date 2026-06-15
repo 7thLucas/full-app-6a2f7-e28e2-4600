@@ -1,43 +1,72 @@
 <style>
-  .mode-landscape .sl-layout { flex-direction: row; }
-  .mode-portrait .sl-layout { flex-direction: column; }
-  .mode-landscape .sl-left { width: 58%; }
-  .mode-portrait .sl-left { width: 100%; }
-  .mode-landscape .sl-right { width: 42%; }
-  .mode-portrait .sl-right { width: 100%; height: 35%; }
+  .mode-landscape .sl-found-layout { flex-direction: row; }
+  .mode-portrait .sl-found-layout { flex-direction: column; }
+  .mode-landscape .sl-found-left { width: 56%; }
+  .mode-portrait .sl-found-left { width: 100%; }
+  .mode-landscape .sl-found-right { width: 44%; }
+  .mode-portrait .sl-found-right { width: 100%; height: 38%; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-layout flex h-full">
-    <!-- Left: problem + solution -->
-    <div class="sl-left flex flex-col justify-center p-12">
-      <!-- Problem -->
-      <div class="mb-10">
-        <span class="text-xs font-bold uppercase tracking-widest text-rose-500 mb-3 block">The Problem</span>
-        <h2 class="text-3xl font-bold text-slate-900 leading-tight mb-4">
-          Local florists are invisible online — before a customer even leaves home
+  <div class="sl-found-layout flex h-full">
+
+    <!-- Left: Problem + Solution -->
+    <div class="sl-found-left flex flex-col justify-center" style="padding: 3rem 2.5rem;">
+
+      <!-- Slide label -->
+      <div class="flex items-center gap-2 mb-7">
+        <span class="w-6 h-0.5 bg-rose-300 rounded"></span>
+        <span class="text-xs font-bold uppercase tracking-widest text-rose-600">Foundation</span>
+      </div>
+
+      <!-- Problem block -->
+      <div class="mb-8">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-rose-500">The Problem</span>
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 leading-snug mb-3">
+          Local flower shops are invisible online — customers can't find hours, location, or what's available.
         </h2>
-        <p class="text-slate-500 text-base leading-relaxed">
-          Walk-in customers decide where to go before stepping out the door. Without a web presence, Veroflower loses foot traffic to whoever appears first — regardless of quality.
+        <p class="text-slate-500 text-sm leading-relaxed" style="max-width: 28rem;">
+          Walk-in customers decide where to go before they leave home. Without a web presence, Veroflower loses foot traffic to whoever appears first — regardless of quality or craft.
         </p>
       </div>
-      <!-- Solution -->
-      <div class="border-l-4 border-emerald-600 pl-6">
-        <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 mb-3 block">The Solution</span>
-        <h2 class="text-2xl font-bold text-emerald-900 leading-tight mb-3">
-          A focused landing page that converts curiosity into a store visit
+
+      <!-- Divider -->
+      <div class="w-full h-px bg-slate-100 mb-8"></div>
+
+      <!-- Solution block -->
+      <div class="border-l-4 border-green-600" style="padding-left: 1.25rem;">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-green-700">The Solution</span>
+        </div>
+        <h2 class="text-xl font-bold text-slate-900 leading-snug mb-3">
+          A two-section landing page: a hero that captures attention, and a store info section with everything needed to visit.
         </h2>
-        <p class="text-slate-500 text-base leading-relaxed">
-          Two sections — a bold hero with a "Visit Us" CTA and a store info section with location and hours — that communicate Veroflower's warmth and craft in seconds, and funnel every visitor toward walking in.
-        </p>
+        <div class="flex gap-3 flex-wrap mt-4">
+          <div class="bg-rose-50 border border-rose-100 rounded-xl px-3 py-2">
+            <span class="text-xs font-bold text-rose-700 block">Section 1</span>
+            <span class="text-sm font-semibold text-slate-800">Hero + "Visit Us" CTA</span>
+          </div>
+          <div class="bg-green-50 border border-green-100 rounded-xl px-3 py-2">
+            <span class="text-xs font-bold text-green-700 block">Section 2</span>
+            <span class="text-sm font-semibold text-slate-800">Address, Hours, Contact</span>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Right image -->
-    <div class="sl-right overflow-hidden">
+
+    <!-- Right: florist image -->
+    <div class="sl-found-right relative overflow-hidden">
       <img
-        src="http://localhost:8001/common/image-generation?prompt=warm%20cozy%20boutique%20flower%20shop%20interior%20fresh%20roses%20sunflowers%20greenery%20natural%20light%20elegant%20premium"
-        alt="Veroflower shop"
+        src="http://localhost:8001/common/image-generation?prompt=warm%20cozy%20boutique%20flower%20shop%20interior%2C%20florist%20arranging%20fresh%20pink%20roses%20and%20greenery%2C%20natural%20morning%20light%20through%20window%2C%20elegant%20premium%20local%20flower%20store"
+        alt="Veroflower florist at work"
         class="w-full h-full object-cover"
       />
+      <!-- Top fade -->
+      <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white to-transparent"></div>
     </div>
+
   </div>
 </section>
