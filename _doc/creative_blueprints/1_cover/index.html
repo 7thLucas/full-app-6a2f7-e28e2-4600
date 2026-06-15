@@ -1,0 +1,44 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-content { width: 55%; }
+  .mode-portrait .sl-content { width: 100%; }
+  .mode-landscape .sl-image { width: 45%; }
+  .mode-portrait .sl-image { width: 100%; height: 40%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+    <!-- Left content -->
+    <div class="sl-content flex flex-col justify-between p-12 bg-white">
+      <div>
+        <div class="flex items-center gap-3 mb-8">
+          <span class="w-8 h-0.5 bg-rose-400 inline-block rounded"></span>
+          <span class="text-rose-500 text-xs font-bold uppercase tracking-widest">Flower Store · Landing Page</span>
+        </div>
+        <h1 class="text-7xl font-black text-emerald-900 leading-none mb-4 tracking-tight">
+          Bloom<br/><span class="text-rose-500">&amp;</span> Co.
+        </h1>
+        <p class="text-lg text-slate-600 leading-relaxed max-w-xs mt-6">
+          A clean, visual two-section landing page that turns curious locals into walk-in customers.
+        </p>
+        <div class="flex gap-2 mt-8">
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Hero</span>
+          <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Bouquet Showcase</span>
+          <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Walk-ins</span>
+        </div>
+      </div>
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+    <!-- Right image -->
+    <div class="sl-image relative overflow-hidden">
+      <img
+        src="http://localhost:8001/common/image-generation?prompt=elegant%20fresh%20flower%20bouquet%20roses%20peonies%20lush%20greenery%20soft%20natural%20light%20premium%20florist%20white%20background%20editorial"
+        alt="Bloom & Co. signature bouquet"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent" style="opacity:0.18"></div>
+    </div>
+  </div>
+</section>
